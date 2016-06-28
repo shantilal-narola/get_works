@@ -15,5 +15,5 @@
  *= require style_login
  *= require bootstrap
 
- *= require_self
+ * require_self
  */
