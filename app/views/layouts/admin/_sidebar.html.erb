@@ -1,0 +1,39 @@
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+   
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="active treeview">
+          <%= link_to  "#" do %>
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>  
+          <% end %>
+        </li>
+        <li class="treeview">
+          <%= link_to admin_freelancers_path  do %>
+            <i class="fa fa-users"></i><span>Freelancer</span>
+          <% end %>
+        </li>
+
+        <li class="treeview">
+          <%= link_to admin_clients_path  do %>
+            <i class="fa fa-user-secret"></i><span>Client</span>
+          <% end %>
+        </li>
+        
+        <li>
+          <%= link_to "#"  do %>
+            <i class="fa fa-suitcase"></i> <span>Projects</span>
+          <% end %>
+        </li>
+        <li class="treeview">
+          <%= link_to "#"  do %>
+            <i class="fa fa-cogs"></i><span>Technology</span> 
+          <% end %>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>

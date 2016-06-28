@@ -1,0 +1,43 @@
+<h1></h1>
+<div class="log">
+
+  <div class="content2">
+    <h2>Sign Up Form</h2>
+    <%= render "shared/flash_messages", flash: flash %> 
+  
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.text_field :first_name, autofocus: true , :placeholder => "FIRST NAME"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {  'FIRST NAME' ;}" %>
+
+      <%= f.text_field :last_name, autofocus: true , :placeholder => "LAST NAME"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {  'LAST NAME' ;}" %>
+      
+      <%= f.email_field :email, :placeholder => "EMAIL" ,  autofocus: true , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {  'FIRST NAME' ;}"  %>
+    
+      <%= f.text_field :contact_num, autofocus: true , :placeholder => "PHONE NUMBER"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {   'PHONE NUMBER' ;}" %>
+
+      <%= f.text_field :sky_id, autofocus: true , :placeholder => "SKYPE ID"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {   'SKYPE ID' ;}" %>
+
+      <%= f.password_field :password, autocomplete: "off" , :placeholder => "PASSWORD"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {   'PASSWORD' ;}" %>
+ 
+
+      <%= f.password_field :password_confirmation, autocomplete: "off" , :placeholder => "CONFIRM PASSWORD"  , :onfocus => "this.value = '' ;" , :onblur => "if(this.value == '') {   'PASSWORD' ;}" %>
+      <div class="row pad-type" >
+        <div class="col-md-6 text-right">
+          <%= f.radio_button :type, 'Freelancer', :checked => true %> 
+          <%= f.label :type ,"Freelancer" %>
+        </div>
+        <duv class="col-md-6 text-left">
+          <%= f.radio_button :type, 'Client' %>
+          <%= f.label :type , "Client" %>
+        </div>
+      </duv>
+          <%= f.submit "Sign up" ,:class => "register" , :value => "Register" %>
+    
+
+    <% end %>
+      <%= render "users/shared/links" %>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="footer">
+  <p>© 2016 Unique Login Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
+</div>

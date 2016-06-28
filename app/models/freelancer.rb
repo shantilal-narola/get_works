@@ -1,0 +1,2 @@
+class Freelancer < User
+end

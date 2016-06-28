@@ -1,0 +1,19 @@
+  <!-- form start --> 
+  <%= bootstrap_form_for([:admin,@admin_freelancer])  do |f| %>
+    <div class="box-body">
+      <div class="col-xs-6">
+        <%= f.text_field :first_name ,:placeholder => "First Name"%>
+        <%= f.text_field :last_name , :placeholder => "Last Name" %>
+        <%= f.email_field :email ,:placeholder => "Email" %>
+        <%= f.file_field :avatar %>
+        <%= f.text_field :contact_num ,:placeholder => "Contact Number" ,:label => "Contact Number"  %>
+        <%= f.text_field :sky_id , :placeholder => "Skype-Id" ,:label => "Skype-Id" %>
+        <%= f.password_field :password , :placeholder => "Password" %>
+        <%= f.password_field :password_confirmation , :placeholder => "Password Confirmation" %>
+        <div class="form-group">
+          <%= f.submit :sumbit , :value =>  @admin_freelancer.new_record? ? "Create Freelancer" : "Update Freelancer"  ,:class => "btn btn-primary" %>
+        </div> 
+      </div>
+    </div>
+    <!-- /.box-body -->
+  <% end %> 

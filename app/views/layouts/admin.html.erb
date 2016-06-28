@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <title>GetWorks</title>
+	  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'admin', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body class="hold-transition skin-blue sidebar-mini">
+		<div class="wrapper">
+			<%= render 'layouts/admin/main_header' %>
+			<%= render 'layouts/admin/sidebar' %>
+			<div class="content-wrapper">
+ 	    		<%= yield %>
+ 	    	</div>
+ 	    </div>
+	</body>
+</html>
+

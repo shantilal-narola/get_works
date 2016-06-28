@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 1.5
+  due_date: 2016-06-14 12:30:47
+  is_active: false
+  user_id: 
+
+two:
+  name: MyString
+  description: MyText
+  price: 1.5
+  due_date: 2016-06-14 12:30:47
+  is_active: false
+  user_id: 

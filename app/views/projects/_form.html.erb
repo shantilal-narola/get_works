@@ -1,0 +1,14 @@
+<%= bootstrap_form_for(@project ,html:{class: "comments-form contact-form"}) do |f| %>
+    <%= f.text_field :name %>
+    <%= f.text_area :description %>
+    <%= f.text_field :price %>
+    <%= f.text_field :due_date ,  :class => "datepicker" %>
+    <%= f.submit "Create Project",:class => "comment-btn" %>
+<% end %>
+<script type="text/javascript">
+  
+ $('.datepicker').datepicker({
+    format: 'dd/mm/yyyy'
+ });
+
+</script>

@@ -1,0 +1,33 @@
+ <!-- Start Feature -->
+  <section id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="title-area">
+            <h2 class="title">Projects</h2>
+            <span class="line"></span>
+            
+            <p>There are lots of projects available here :).So please describe your skill here and get those project which match your skill with projects .</p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="feature-content">
+            <div class="row">
+              <%@projects.each do |project| %>
+                 <div class="col-md-4 col-sm-6">
+                  <div class="single-feature wow zoomIn">
+                    <%= link_to  project_path(project) ,:style => "text-decoration:none; " do %>
+                      <h4 class="feat-title"><%=project.name %> </h4>
+                    <% end%>
+                    posted at <%= project.created_at.strftime("%d-%m-%Y %H:%M")  %> ago.
+                    <p><%= project.description %></p>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Feature -->

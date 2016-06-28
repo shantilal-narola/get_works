@@ -1,0 +1,81 @@
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Freelancer 
+        <small>List</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-users"></i> Freelancer</a></li>
+        <li> <%=link_to "List" ,admin_freelancers_path %></li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>User Name</th>
+                  <th>Email</th>
+                  <th>Contact No</th>
+                  <th>Skype-Id</th>
+                  <th >Action</th>
+                </tr>
+                </thead>
+              
+                <tbody>
+                	<% @admin_freelancers.each do |freelancer|  %>
+	                	<tr>
+		                  <td><%=freelancer.full_name%></td>
+		                  <td><%=freelancer.email %></td>
+		                  <td><%= freelancer.contact_num %></td>
+		                  <td> <%= freelancer.sky_id %></td>
+		                  <td><%=show_link(admin_freelancer_path(freelancer)) %> 
+                          <%=edit_link(edit_admin_freelancer_path(freelancer)) %>
+                          <%=delete_link(admin_freelancer_path(freelancer))%>
+	                  	</td>
+		                </tr>
+	              	<% end %>
+	                
+                </tbody>
+                <tfoot>
+	                <tr>
+	                  <th>User Name</th>
+	                  <th>Email</th>
+	                  <th>Contact No</th>
+	                  <th>Skype-Id</th>
+	                  <th >Action</th>
+	                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+
+
+ <script type="text/javascript">
+  $(function () {
+    $('#example1').DataTable();
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false
+    });
+  });
+</script>
